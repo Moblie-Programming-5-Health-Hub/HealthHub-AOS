@@ -1,0 +1,21 @@
+<resources>
+    <!--  Spacing  -->
+    <dimen name="spacing4">4dp</dimen>
+    <dimen name="spacing10">10dp</dimen>
+    <dimen name="spacing12">12dp</dimen>
+    <dimen name="spacing14">14dp</dimen>
+    <dimen name="spacing16">16dp</dimen>
+    <dimen name="spacing17">17dp</dimen>
+    <dimen name="spacing20">20dp</dimen>
+    <dimen name="spacing24">24dp</dimen>
+    <dimen name="spacing27">27dp</dimen>
+
+    <!-- Widget Size -->
+    <dimen name="button_height_56">56dp</dimen>
+    <dimen name="button_height_80">80dp</dimen>
+    <dimen name="button_height_300">200dp</dimen>
+    <dimen name="button_width">80dp</dimen>
+
+    <!-- Splash -->
+    <dimen name="spacing121">121dp</dimen>
+</resources>
