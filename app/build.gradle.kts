@@ -53,4 +53,7 @@ dependencies {
     //ktx
     implementation("androidx.fragment:fragment-ktx:1.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+
+    //splash
+    implementation("androidx.core:core-splashscreen:1.0.1")
 }
