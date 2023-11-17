@@ -21,5 +21,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!--예시입니다. 제가 만들어둔 버튼의 속성들을 하나씩 지워보면서 확인하시면 좋을 것 같습니다-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_horizontal"
+            style="@style/Widget.FullButton.Basic"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/main_4"
+            android:text="이렇게 쓰시면 됩니다"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_vertical"
+            style="@style/Widget.FullButton.Basic.Vertical"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/main_4"
+            android:text="식단"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_horizontal" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
