@@ -1,15 +1,69 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.HealthHub" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.HealthHub" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:includeFontPadding">false</item>
+        <item name="colorControlHighlight">#A9FAF7F2</item>
+        <item name="android:overScrollMode">never</item>
     </style>
 
-    <style name="Theme.HealthHub" parent="Base.Theme.HealthHub" />
+    <!--  ImageView Style  -->
+    <style name="Radius5">
+        <item name="cornerSize">5dp</item>
+    </style>
     
+    <!--text-->
     <style name="TextAppearance.HealthHub" parent="">
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">?colorOnBackground</item>
         <item name="android:includeFontPadding">false</item>
     </style>
+
+    <!--splash-->
+    <style name="Theme.HealthHub.splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+        <item name="postSplashScreenTheme">@style/Theme.HealthHub</item>
+    </style>
+
+    <!--  Widget  -->
+    <style name="Widget.Material.Button.Basic" parent="">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Widget.FullButton.Basic" parent="Widget.Material.Button.Basic">
+        <item name="android:layout_height">@dimen/button_height_80</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <style name="Widget.OutlinedButton.Basic" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_height">@dimen/button_height_80</item>
+        <item name="android:width">0dp</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <style name="Widget.FullButton.Basic.Vertical" parent="Widget.Material.Button.Basic">
+        <item name="android:layout_height">@dimen/button_height_300</item>
+        <item name="android:layout_width">@dimen/button_width</item>
+        <item name="android:width">0dp</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
 </resources>
