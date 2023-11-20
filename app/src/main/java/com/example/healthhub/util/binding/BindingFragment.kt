@@ -1,4 +1,4 @@
-package com.example.healthhub.util
+package com.example.healthhub.util.binding
 
 import android.os.Bundle
 import android.view.LayoutInflater
