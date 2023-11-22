@@ -30,19 +30,15 @@ class PersonalInfoActivity :
         }
         binding.btnAllReady.setOnClickListener {
             Log.e("button click","${viewModel.nickname.value}")
-            moveToHome()
             viewModel.savePersonalInfo()
+            moveToHome()
         }
     }
 
     private fun moveToHome() {
         Log.e("home click","${viewModel.nickname.value}")
         val intent = Intent(this, HydrationActivity::class.java)
-        setResult(RESULT_OK, intent)
+        startActivity(intent)
         finish()
-    }
-
-    companion object {
-        const val PERSONAL_INFO = "PERSONAL_INFO"
     }
 }
