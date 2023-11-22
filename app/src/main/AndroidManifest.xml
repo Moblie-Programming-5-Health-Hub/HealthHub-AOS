@@ -28,6 +28,9 @@
         <activity
             android:name=".presentation.info.PersonalInfoActivity"
             android:exported="true" />
+        <activity
+            android:name=".presentation.water.HydrationActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
