@@ -60,8 +60,15 @@
     </style>
 
     <style name="Widget.FullButton.Basic.Vertical" parent="Widget.Material.Button.Basic">
-        <item name="android:layout_height">@dimen/button_height_300</item>
+        <item name="android:layout_height">@dimen/button_height_200</item>
         <item name="android:layout_width">@dimen/button_width</item>
+        <item name="android:width">0dp</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <style name="Widget.FullButton.Basic.Large" parent="Widget.Material.Button.Basic">
+        <item name="android:layout_height">@dimen/button_height_200</item>
+        <item name="android:layout_width">@dimen/button_width_large</item>
         <item name="android:width">0dp</item>
         <item name="cornerRadius">12dp</item>
     </style>

@@ -1,4 +1,5 @@
 <resources>
+    <!--welcome view-->
     <string name="app_name">HealthHub</string>
     <string name="personal_info_welcome_text">안녕하세요 HealthHub 입니다!\n개인 정보를 입력해주세요</string>
     <string name="personal_info_nickname">닉네임</string>
@@ -10,4 +11,9 @@
     <string name="personal_info_gender">성별</string>
     <string name="personal_info_gender_male">남</string>
     <string name="personal_info_gender_female">여</string>
+    <string name="personal_info_male">남</string>
+    <string name="personal_info_female">여</string>
+
+    <!--home view-->
+    <string name="home_title">%s님\nHealthHub에 오신걸 환영해요!</string>
 </resources>
