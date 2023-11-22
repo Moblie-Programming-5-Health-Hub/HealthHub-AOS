@@ -26,9 +26,19 @@ class LocalData(context: Context) {
         set(value) = dataStore.edit { putString(USER_NICKNAME, value) }
         get() = dataStore.getString(USER_NICKNAME, "") ?: ""
 
+    var height: Int
+        set(value) = dataStore.edit { putInt(USER_HEIGHT, value) }
+        get() = dataStore.getInt(USER_HEIGHT, 0)
+
+    var weight: Int
+        set(value) = dataStore.edit { putInt(USER_WEIGHT, value) }
+        get() = dataStore.getInt(USER_WEIGHT, 0)
+
 
     companion object {
         const val FILE_NAME = "HealthHub"
         const val USER_NICKNAME = "nickname"
+        const val USER_HEIGHT = "height"
+        const val USER_WEIGHT = "weight"
     }
 }
