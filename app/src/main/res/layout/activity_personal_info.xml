@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.example.healthhub.presentation.info.PersonalInfoViewModel" />
+
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -24,7 +29,7 @@
             app:layout_constraintGuide_end="@dimen/spacing24" />
 
         <TextView
-            android:id="@+id/tv_welcome"
+            android:id="@+id/tv_info"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -41,8 +46,8 @@
             android:layout_marginTop="50dp"
             android:text="@string/personal_info_nickname"
             android:textAppearance="@style/TextAppearance.Subhead"
-            app:layout_constraintStart_toStartOf="@id/tv_welcome"
-            app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+            app:layout_constraintStart_toStartOf="@id/tv_info"
+            app:layout_constraintTop_toBottomOf="@id/tv_info" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_nickname"
@@ -51,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:theme="@style/TextInputLayout"
-            app:layout_constraintEnd_toEndOf="@id/tv_welcome"
+            app:layout_constraintEnd_toEndOf="@id/tv_info"
             app:layout_constraintStart_toStartOf="@id/tv_nickname"
             app:layout_constraintTop_toBottomOf="@id/tv_nickname">
 
@@ -60,6 +65,7 @@
                 android:layout_height="match_parent"
                 android:hint="@string/personal_info_nickname_hint"
                 android:inputType="text"
+                android:text="@={viewModel.nickname}"
                 android:textColorHint="@color/gray_300" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -81,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:theme="@style/TextInputLayout"
-            app:layout_constraintEnd_toEndOf="@id/tv_welcome"
+            app:layout_constraintEnd_toEndOf="@id/tv_info"
             app:layout_constraintStart_toStartOf="@id/tv_height"
             app:layout_constraintTop_toBottomOf="@id/tv_height">
 
@@ -89,7 +95,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/personal_info_height_hint"
-                android:inputType="text"
+                android:inputType="number"
+                android:text="@={viewModel.height}"
                 android:textColorHint="@color/gray_300" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -111,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:theme="@style/TextInputLayout"
-            app:layout_constraintEnd_toEndOf="@id/tv_welcome"
+            app:layout_constraintEnd_toEndOf="@id/tv_info"
             app:layout_constraintStart_toStartOf="@id/tv_weight"
             app:layout_constraintTop_toBottomOf="@id/tv_weight">
 
@@ -119,7 +126,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/personal_info_weight_hint"
-                android:inputType="text"
+                android:inputType="number"
+                android:text="@={viewModel.weight}"
                 android:textColorHint="@color/gray_300" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -134,24 +142,40 @@
             app:layout_constraintStart_toStartOf="@id/til_weight"
             app:layout_constraintTop_toBottomOf="@id/til_weight" />
 
-        <CheckBox
-            android:id="@+id/checkbox_male"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/personal_info_gender_male"
-            android:textAppearance="@style/TextAppearance.Subhead"
-            app:layout_constraintStart_toStartOf="@id/tv_gender"
-            app:layout_constraintTop_toBottomOf="@id/tv_gender" />
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="70dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@+id/tv_gender">
 
-        <CheckBox
-            android:id="@+id/checkbox_female"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:text="@string/personal_info_gender_female"
-            android:textAppearance="@style/TextAppearance.Subhead"
-            app:layout_constraintStart_toEndOf="@id/checkbox_male"
-            app:layout_constraintTop_toTopOf="@id/checkbox_male" />
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/personal_info_male" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/personal_info_female" />
+
+        </RadioGroup>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_all_ready"
+            style="@style/Widget.FullButton.Basic"
+            android:layout_height="56dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/main_4"
+            android:text="완료"
+            android:textAppearance="@style/TextAppearance.BodyM1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintStart_toStartOf="@id/gl_start" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
