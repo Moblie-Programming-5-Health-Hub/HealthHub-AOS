@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 환영 메시지 -->
+        <ImageView
+            android:id="@+id/iv_center_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Logo"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/welcomeMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintTop_toBottomOf="@id/iv_center_icon"
+            android:gravity="center"
+            android:lineSpacingExtra="7dp"
+            android:text="안녕하세요 홍길동님!\n오늘은 어떤 목적으로 오셨나요?"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@android:color/black"
+            android:textSize="23sp" />
+
+        <!-- 버튼 1 -->
+        <LinearLayout
+            android:id="@+id/layout_button_1"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcomeMessage"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="Image 1"
+                android:src="@drawable/stretch" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_stretch"
+                style="@style/Widget.FullButton.Basic"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/main_3"
+                android:text="스트래칭 하기" />
+        </LinearLayout>
+
+        <!-- 버튼 2 -->
+        <LinearLayout
+            android:id="@+id/layout_button_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_button_1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="Image 2"
+                android:src="@drawable/exercise" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_exercise"
+                style="@style/Widget.FullButton.Basic"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/main_2"
+                android:text="운동 시작하기" />
+        </LinearLayout>
+
+        <!-- 버튼 3 -->
+        <LinearLayout
+            android:id="@+id/layout_button_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_button_2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="Image 2"
+                android:src="@drawable/food" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_food"
+                style="@style/Widget.FullButton.Basic"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/main_3"
+                android:text="식단 관리하기" />
+        </LinearLayout>
+
+        <!-- 버튼 4 -->
+        <LinearLayout
+            android:id="@+id/layout_button_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_button_3"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="Image 2"
+                android:src="@drawable/water" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_water"
+                style="@style/Widget.FullButton.Basic"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/main_2"
+                android:text="식단 관리하기" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
