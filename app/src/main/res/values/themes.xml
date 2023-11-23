@@ -60,10 +60,28 @@
     </style>
 
     <style name="Widget.FullButton.Basic.Vertical" parent="Widget.Material.Button.Basic">
-        <item name="android:layout_height">@dimen/button_height_300</item>
+        <item name="android:layout_height">@dimen/button_height_200</item>
         <item name="android:layout_width">@dimen/button_width</item>
         <item name="android:width">0dp</item>
         <item name="cornerRadius">12dp</item>
+    </style>
+
+    <style name="Widget.FullButton.Basic.Large" parent="Widget.Material.Button.Basic">
+        <item name="android:layout_height">@dimen/button_height_200</item>
+        <item name="android:layout_width">@dimen/button_width_large</item>
+        <item name="android:width">0dp</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+    
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="colorControlNormal">@color/main_5</item>  // unFocus 상태일때 밑줄 색
+        <item name="boxStrokeColor">@color/main_4</item> // Focus 상태일때 밑줄 색
+        <item name="android:textCursorDrawable">@color/main_5</item>  // cursor 색
+
+
+        <item name="android:textColorHint">@color/gray_300</item>  // hint 색
+        <item name="hintTextColor">@color/main_4</item>   // floating hint 색
+
     </style>
 
 </resources>
