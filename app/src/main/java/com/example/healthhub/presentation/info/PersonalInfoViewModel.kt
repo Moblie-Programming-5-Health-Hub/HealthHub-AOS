@@ -18,6 +18,11 @@ class PersonalInfoViewModel(private val localData: LocalData) : ViewModel() {
         localData.weight = weight.value?.toInt()!!
     }
 
+    fun readyToStart(){
+        if(!nickname.value.isNullOrBlank()&&!height.value.isNullOrBlank()&&!weight.value.isNullOrBlank()){
+            //TODO 버튼 조건 만족 안할 때 다이얼로그 띄우기
+        }
+    }
     fun getUserInfo(): PersonalInfo {
         return PersonalInfo(
             localData.nickname,
