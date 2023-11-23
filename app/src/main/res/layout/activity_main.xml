@@ -1,49 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <TextView
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/spacing24" />
 
-        <!--예시입니다. 제가 만들어둔 버튼의 속성들을 하나씩 지워보면서 확인하시면 좋을 것 같습니다-->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_horizontal"
-            style="@style/Widget.FullButton.Basic"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="@color/main_4"
-            android:text="이렇게 쓰시면 됩니다"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/spacing24" />
+
+        <EditText
+            android:id="@+id/user"
+            android:hint="고경아"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:textAppearance="@style/TextAppearance.Title1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/tv_meal"
+            android:text="님의 식단"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintBottom_toBottomOf="@id/user"
+            app:layout_constraintStart_toEndOf="@+id/user"
+            app:layout_constraintTop_toTopOf="@+id/user" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:text="오늘은 어떤 음식을 드셨나요?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@+id/user" />
+
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_vertical"
+            android:id="@+id/btn_morning"
+            android:text="아침"
             style="@style/Widget.FullButton.Basic.Vertical"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="35dp"
             android:backgroundTint="@color/main_4"
-            android:text="식단"
             android:textAppearance="@style/TextAppearance.Title1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_horizontal" />
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/textView1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_lunch"
+            android:text="점심"
+            style="@style/Widget.FullButton.Basic.Vertical"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/main_4"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintEnd_toStartOf="@+id/btn_dinner"
+            app:layout_constraintStart_toEndOf="@id/btn_morning"
+            app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dinner"
+            android:text="저녁"
+            style="@style/Widget.FullButton.Basic.Vertical"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/main_4"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+        <EditText
+            android:id="@+id/et_morning"
+            android:hint="200kcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Title2"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/btn_morning" />
+
+        <EditText
+            android:id="@+id/et_lunch"
+            android:hint="200kcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Title2"
+            app:layout_constraintEnd_toStartOf="@id/et_dinner"
+            app:layout_constraintStart_toEndOf="@id/et_morning"
+            app:layout_constraintTop_toBottomOf="@id/btn_lunch" />
+
+        <EditText
+            android:id="@+id/et_dinner"
+            android:hint="200kcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Title2"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintTop_toBottomOf="@id/btn_dinner" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_calc"
+            android:text="칼로리 계산하기"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/main_4"
+            android:textAppearance="@style/TextAppearance.Title2"
+            app:layout_constraintEnd_toEndOf="@id/gl_end"
+            app:layout_constraintTop_toBottomOf="@id/et_morning" />
+
+        <TextView
+            android:id="@+id/tv_total_calorie"
+            android:text="오늘 섭취한 총 칼로리는?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@+id/btn_calc" />
+
+        <EditText
+            android:id="@+id/et_calorie"
+            android:hint="600kcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="dp"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_calorie" />
+
+        <EditText
+            android:id="@+id/user_tmp"
+            android:hint="고경아"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/et_calorie" />
+
+        <TextView
+            android:text="님은 오늘 권장 kcal의"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintStart_toEndOf="@id/user_tmp"
+            app:layout_constraintBottom_toBottomOf="@id/user_tmp"
+            app:layout_constraintTop_toTopOf="@id/user_tmp" />
+
+        <EditText
+            android:id="@+id/calorie_percent"
+            android:hint="85"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
+            app:layout_constraintTop_toBottomOf="@id/user_tmp" />
+
+        <TextView
+            android:text="% 만큼 섭취하셨습니다!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintStart_toEndOf="@id/calorie_percent"
+            app:layout_constraintBottom_toBottomOf="@id/calorie_percent"
+            app:layout_constraintTop_toTopOf="@id/calorie_percent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
