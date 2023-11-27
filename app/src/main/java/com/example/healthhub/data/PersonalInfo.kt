@@ -8,4 +8,5 @@ data class PersonalInfo(
     var nickname: String? = null,
     var height: String? = null,
     var weight: String? = null,
-): Parcelable
+    var gender: GenderType,
+) : Parcelable
