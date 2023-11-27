@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.activity.viewModels
 import com.example.healthhub.R
 import com.example.healthhub.common.ViewModelFactory
+import com.example.healthhub.data.LocalData
 import com.example.healthhub.databinding.ActivityPersonalInfoBinding
 import com.example.healthhub.presentation.water.HydrationActivity
 import com.example.healthhub.util.extension.hideKeyboard
@@ -14,7 +15,6 @@ import com.example.healthhub.util.binding.BindingActivity
 class PersonalInfoActivity :
     BindingActivity<ActivityPersonalInfoBinding>(R.layout.activity_personal_info) {
     private val viewModel: PersonalInfoViewModel by viewModels { ViewModelFactory(this) }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
