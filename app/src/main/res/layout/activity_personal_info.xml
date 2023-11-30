@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.example.healthhub.data.GenderType"/>
+
+        <import type="com.example.healthhub.data.GenderType" />
 
         <variable
             name="viewModel"
@@ -148,30 +149,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            app:singleSelection="true"
             app:layout_constraintStart_toStartOf="@id/gl_start"
-            app:layout_constraintTop_toBottomOf="@id/tv_gender">
+            app:layout_constraintTop_toBottomOf="@id/tv_gender"
+            app:singleSelection="true">
 
             <com.google.android.material.chip.Chip
-                selected="@{viewModel.gender == GenderType.MALE}"
-                android:onClick="@{() -> viewModel.setGender(GenderType.MALE)}"
                 android:id="@+id/chip_male"
                 android:layout_width="80dp"
-                android:checkable="true"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/selector_gender_chip"
+                android:checkable="true"
+                android:onClick="@{() -> viewModel.setGender(GenderType.MALE)}"
                 android:text="@string/personal_info_gender_male"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.BodyB2" />
 
             <com.google.android.material.chip.Chip
-                selected="@{viewModel.gender == GenderType.FEMALE}"
-                android:onClick="@{() -> viewModel.setGender(GenderType.FEMALE)}"
                 android:id="@+id/chip_female"
                 android:layout_width="80dp"
-                android:checkable="true"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/selector_gender_chip"
+                android:checkable="true"
+                android:onClick="@{() -> viewModel.setGender(GenderType.FEMALE)}"
                 android:text="@string/personal_info_gender_female"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.BodyB2" />
