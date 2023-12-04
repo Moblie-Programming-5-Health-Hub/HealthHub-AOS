@@ -9,8 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/gl_start"
@@ -28,19 +27,19 @@
 
         <EditText
             android:id="@+id/user"
-            android:hint="고경아"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:hint="고경아"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_meal"
-            android:text="님의 식단"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="님의 식단"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintBottom_toBottomOf="@id/user"
             app:layout_constraintStart_toEndOf="@+id/user"
@@ -48,30 +47,30 @@
 
         <TextView
             android:id="@+id/textView1"
-            android:text="오늘은 어떤 음식을 드셨나요?"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:text="오늘은 어떤 음식을 드셨나요?"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@+id/user" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_morning"
-            android:text="아침"
             style="@style/Widget.FullButton.Basic.Vertical"
             android:layout_marginTop="35dp"
             android:backgroundTint="@color/main_4"
+            android:text="아침"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@id/textView1" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_lunch"
-            android:text="점심"
             style="@style/Widget.FullButton.Basic.Vertical"
             android:layout_marginTop="35dp"
             android:backgroundTint="@color/main_4"
+            android:text="점심"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintEnd_toStartOf="@+id/btn_dinner"
             app:layout_constraintStart_toEndOf="@id/btn_morning"
@@ -79,28 +78,28 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dinner"
-            android:text="저녁"
             style="@style/Widget.FullButton.Basic.Vertical"
             android:layout_marginTop="35dp"
             android:backgroundTint="@color/main_4"
+            android:text="저녁"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintEnd_toEndOf="@id/gl_end"
             app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
         <EditText
             android:id="@+id/et_morning"
-            android:hint="200kcal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:hint="200kcal"
             android:textAppearance="@style/TextAppearance.Title2"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@id/btn_morning" />
 
         <EditText
             android:id="@+id/et_lunch"
-            android:hint="200kcal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:hint="200kcal"
             android:textAppearance="@style/TextAppearance.Title2"
             app:layout_constraintEnd_toStartOf="@id/et_dinner"
             app:layout_constraintStart_toEndOf="@id/et_morning"
@@ -108,79 +107,79 @@
 
         <EditText
             android:id="@+id/et_dinner"
-            android:hint="200kcal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:hint="200kcal"
             android:textAppearance="@style/TextAppearance.Title2"
             app:layout_constraintEnd_toEndOf="@id/gl_end"
             app:layout_constraintTop_toBottomOf="@id/btn_dinner" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_calc"
-            android:text="칼로리 계산하기"
-            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@color/main_4"
+            android:text="칼로리 계산하기"
             android:textAppearance="@style/TextAppearance.Title2"
             app:layout_constraintEnd_toEndOf="@id/gl_end"
             app:layout_constraintTop_toBottomOf="@id/et_morning" />
 
         <TextView
             android:id="@+id/tv_total_calorie"
-            android:text="오늘 섭취한 총 칼로리는?"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:text="오늘 섭취한 총 칼로리는?"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@+id/btn_calc" />
 
         <EditText
             android:id="@+id/et_calorie"
-            android:hint="600kcal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:hint="600kcal"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@id/tv_total_calorie" />
 
         <EditText
             android:id="@+id/user_tmp"
-            android:hint="고경아"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:hint="고경아"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@id/et_calorie" />
 
         <TextView
-            android:text="님은 오늘 권장 kcal의"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="님은 오늘 권장 kcal의"
             android:textAppearance="@style/TextAppearance.Title1"
-            app:layout_constraintStart_toEndOf="@id/user_tmp"
             app:layout_constraintBottom_toBottomOf="@id/user_tmp"
+            app:layout_constraintStart_toEndOf="@id/user_tmp"
             app:layout_constraintTop_toTopOf="@id/user_tmp" />
 
         <EditText
             android:id="@+id/calorie_percent"
-            android:hint="85"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:hint="85"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@id/user_tmp" />
 
         <TextView
-            android:text="% 만큼 섭취하셨습니다!"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="% 만큼 섭취하셨습니다!"
             android:textAppearance="@style/TextAppearance.Title1"
-            app:layout_constraintStart_toEndOf="@id/calorie_percent"
             app:layout_constraintBottom_toBottomOf="@id/calorie_percent"
+            app:layout_constraintStart_toEndOf="@id/calorie_percent"
             app:layout_constraintTop_toTopOf="@id/calorie_percent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
