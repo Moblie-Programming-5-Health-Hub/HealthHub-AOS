@@ -29,7 +29,7 @@
             android:name=".presentation.info.PersonalInfoActivity"
             android:exported="true" />
         <activity
-            android:name=".presentation.water.HydrationActivity"
+            android:name=".presentation.workout.WorkoutDetailActivity"
             android:exported="true" />
     </application>
 
