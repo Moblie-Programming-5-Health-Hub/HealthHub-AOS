@@ -62,4 +62,7 @@ dependencies {
 
     // EncryptedSharedPreferences
     implementation ("androidx.security:security-crypto-ktx:1.1.0-alpha03")
+
+    //coil
+    implementation("io.coil-kt:coil:0.10.0")
 }
