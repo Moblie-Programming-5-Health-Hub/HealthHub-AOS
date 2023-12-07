@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.lifecycle.ViewModelProvider
 import com.example.healthhub.R
 import com.example.healthhub.common.ViewModelFactory
 import com.example.healthhub.databinding.ActivityCalorieDetailBinding
 import com.example.healthhub.presentation.info.PersonalInfoViewModel
 import com.example.healthhub.util.binding.BindingActivity
+import com.example.healthhub.util.extension.hideKeyboard
 
 class CalorieActivity :
     BindingActivity<ActivityCalorieDetailBinding>(R.layout.activity_calorie_detail) {
@@ -17,9 +17,14 @@ class CalorieActivity :
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //personalInfoViewModel = ViewModelProvider(this)[PersonalInfoViewModel::class.java]
-        binding.viewModel = personalInfoViewModel
-        binding.lifecycleOwner = this
+        addListener()
+        getNickname()
+    }
+
+    private fun addListener() {
+        binding.root.setOnClickListener {
+            hideKeyboard(it)
+        }
 
         binding.btnCalc.setOnClickListener {
             if (isInputEmpty()) {
@@ -32,7 +37,7 @@ class CalorieActivity :
                 binding.caloriePercent.text = String.format("%.2f", totalPercent)
             }
         }
-        getNickname()
+
     }
 
     private fun isInputEmpty(): Boolean {
@@ -70,6 +75,4 @@ class CalorieActivity :
         binding.tvUser.text = personalInfo.nickname
         binding.tvUserTmp.text = personalInfo.nickname
     }
-
-    //TODO 홉뷰에서 식단 버튼 클릭 했을 때 이동하기
 }
