@@ -7,8 +7,7 @@ import androidx.activity.viewModels
 import com.example.healthhub.R
 import com.example.healthhub.common.ViewModelFactory
 import com.example.healthhub.databinding.ActivityPersonalInfoBinding
-import com.example.healthhub.presentation.home.HomeActivity
-import com.example.healthhub.presentation.water.HydrationActivity
+import com.example.healthhub.presentation.workout.WorkoutDetailActivity
 import com.example.healthhub.util.binding.BindingActivity
 import com.example.healthhub.util.extension.hideKeyboard
 import com.google.android.material.snackbar.Snackbar
