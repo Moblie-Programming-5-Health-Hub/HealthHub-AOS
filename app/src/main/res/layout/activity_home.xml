@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- 환영 메시지 -->
         <ImageView
             android:id="@+id/iv_center_icon"
             android:layout_width="100dp"
@@ -17,11 +16,11 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"
             android:layout_marginBottom="100dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:contentDescription="Logo"
-            android:src="@drawable/logo" />
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_welcomeMessage"
@@ -30,28 +29,28 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"
-            android:textAppearance="@style/TextAppearance.Title1"
-            app:layout_constraintTop_toBottomOf="@id/iv_center_icon"
             android:gravity="center"
             android:lineSpacingExtra="7dp"
             android:text="안녕하세요 홍길동님!\n오늘은 어떤 목적으로 오셨나요?"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textAppearance="@style/TextAppearance.Title1"
             android:textColor="@android:color/black"
-            android:textSize="23sp" />
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_center_icon" />
 
         <!-- 버튼 1 -->
         <LinearLayout
             android:id="@+id/layout_button_1"
-            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_welcomeMessage"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="15dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_welcomeMessage">
 
             <ImageView
                 android:layout_width="55dp"
@@ -65,7 +64,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:backgroundTint="@color/main_3"
-                android:text="스트래칭 하기" />
+                android:text="@string/home_streching"
+                android:textAppearance="@style/TextAppearance.BodyB1" />
         </LinearLayout>
 
         <!-- 버튼 2 -->
@@ -73,13 +73,13 @@
             android:id="@+id/layout_button_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_button_1"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_button_1">
 
             <ImageView
                 android:layout_width="55dp"
@@ -93,7 +93,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:backgroundTint="@color/main_2"
-                android:text="운동 시작하기" />
+                android:text="@string/home_exercise"
+                android:textAppearance="@style/TextAppearance.BodyB1" />
         </LinearLayout>
 
         <!-- 버튼 3 -->
@@ -101,13 +102,13 @@
             android:id="@+id/layout_button_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_button_2"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_button_2">
 
             <ImageView
                 android:layout_width="55dp"
@@ -121,7 +122,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:backgroundTint="@color/main_3"
-                android:text="식단 관리하기" />
+                android:text="@string/home_food"
+                android:textAppearance="@style/TextAppearance.BodyB1" />
         </LinearLayout>
 
         <!-- 버튼 4 -->
@@ -129,13 +131,13 @@
             android:id="@+id/layout_button_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_button_3"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_button_3">
 
             <ImageView
                 android:layout_width="55dp"
@@ -149,7 +151,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:backgroundTint="@color/main_2"
-                android:text="수분섭취 기록하기" />
+                android:text="@string/home_water"
+                android:textAppearance="@style/TextAppearance.BodyB1" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
