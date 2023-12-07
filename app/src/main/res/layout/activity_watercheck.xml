@@ -33,10 +33,10 @@
             android:layout_marginBottom="40dp"
             android:gravity="center"
             android:lineSpacingExtra="7dp"
+            android:text="@string/watercheck_text_who"
             android:textAppearance="@style/TextAppearance.Title1"
             android:textColor="@android:color/black"
             android:textSize="20sp"
-            android:text="세계 보건기구(WHO)에 따르면 \n 하루 적정 물 섭취량은 2L(8잔)입니다!"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_center_icon_2" />
@@ -50,12 +50,12 @@
             android:layout_marginBottom="23dp"
             android:gravity="center"
             android:lineSpacingExtra="7dp"
+            android:text="@string/watercheck_text"
             android:textAppearance="@style/TextAppearance.Title1"
+            android:textColor="#147814"
             android:textSize="25sp"
-            android:text="오늘은 얼마나 물을 마셨나요?"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:textColor="#147814"
             app:layout_constraintTop_toBottomOf="@id/average_water" />
 
         <ImageView
@@ -72,167 +72,167 @@
             android:id="@+id/bottle2"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/bottle"
-            app:layout_constraintTop_toBottomOf="@id/check_water"
-            app:layout_constraintStart_toEndOf="@id/bottle1"
-            app:layout_constraintEnd_toStartOf="@id/bottle3"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="40dp"/>
+            android:layout_marginTop="40dp"
+            android:src="@drawable/bottle"
+            app:layout_constraintEnd_toStartOf="@id/bottle3"
+            app:layout_constraintStart_toEndOf="@id/bottle1"
+            app:layout_constraintTop_toBottomOf="@id/check_water" />
 
         <ImageView
             android:id="@+id/bottle3"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/bottle"
-            app:layout_constraintTop_toBottomOf="@id/check_water"
-            app:layout_constraintStart_toEndOf="@id/bottle2"
-            app:layout_constraintEnd_toStartOf="@id/bottle4"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="40dp"/>
+            android:layout_marginTop="40dp"
+            android:src="@drawable/bottle"
+            app:layout_constraintEnd_toStartOf="@id/bottle4"
+            app:layout_constraintStart_toEndOf="@id/bottle2"
+            app:layout_constraintTop_toBottomOf="@id/check_water" />
 
         <ImageView
             android:id="@+id/bottle4"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/bottle"
-            app:layout_constraintTop_toBottomOf="@id/check_water"
-            app:layout_constraintStart_toEndOf="@id/bottle3"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="40dp"/>
+            android:layout_marginTop="40dp"
+            android:src="@drawable/bottle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bottle3"
+            app:layout_constraintTop_toBottomOf="@id/check_water" />
 
         <ImageView
             android:id="@+id/bottle5"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginTop="70dp"
             android:src="@drawable/bottle"
-            app:layout_constraintTop_toBottomOf="@id/bottle1"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/bottle6"
-            android:layout_marginTop="70dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bottle1" />
 
         <ImageView
             android:id="@+id/bottle6"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/bottle"
-            app:layout_constraintTop_toBottomOf="@id/bottle2"
-            app:layout_constraintStart_toEndOf="@id/bottle5"
-            app:layout_constraintEnd_toStartOf="@id/bottle7"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="70dp"/>
+            android:layout_marginTop="70dp"
+            android:src="@drawable/bottle"
+            app:layout_constraintEnd_toStartOf="@id/bottle7"
+            app:layout_constraintStart_toEndOf="@id/bottle5"
+            app:layout_constraintTop_toBottomOf="@id/bottle2" />
 
         <ImageView
             android:id="@+id/bottle7"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/bottle"
-            app:layout_constraintTop_toBottomOf="@id/bottle3"
-            app:layout_constraintStart_toEndOf="@id/bottle6"
-            app:layout_constraintEnd_toStartOf="@id/bottle8"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="70dp"/>
+            android:layout_marginTop="70dp"
+            android:src="@drawable/bottle"
+            app:layout_constraintEnd_toStartOf="@id/bottle8"
+            app:layout_constraintStart_toEndOf="@id/bottle6"
+            app:layout_constraintTop_toBottomOf="@id/bottle3" />
 
         <ImageView
             android:id="@+id/bottle8"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/bottle"
-            app:layout_constraintTop_toBottomOf="@id/bottle4"
-            app:layout_constraintStart_toEndOf="@id/bottle7"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="70dp"/>
+            android:layout_marginTop="70dp"
+            android:src="@drawable/bottle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bottle7"
+            app:layout_constraintTop_toBottomOf="@id/bottle4" />
 
         <CheckBox
             android:id="@+id/checkBox1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="1병"
-            app:layout_constraintTop_toBottomOf="@id/bottle1"
-            app:layout_constraintStart_toStartOf="@id/bottle1"
             app:layout_constraintEnd_toEndOf="@id/bottle1"
-            android:layout_marginTop="8dp"/>
+            app:layout_constraintStart_toStartOf="@id/bottle1"
+            app:layout_constraintTop_toBottomOf="@id/bottle1" />
 
         <CheckBox
             android:id="@+id/checkBox2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="2병"
-            app:layout_constraintTop_toBottomOf="@id/bottle2"
-            app:layout_constraintStart_toStartOf="@id/bottle2"
             app:layout_constraintEnd_toEndOf="@id/bottle2"
-            android:layout_marginTop="8dp"/>
+            app:layout_constraintStart_toStartOf="@id/bottle2"
+            app:layout_constraintTop_toBottomOf="@id/bottle2" />
 
         <CheckBox
             android:id="@+id/checkBox3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="3병"
-            app:layout_constraintTop_toBottomOf="@id/bottle3"
-            app:layout_constraintStart_toStartOf="@id/bottle3"
             app:layout_constraintEnd_toEndOf="@id/bottle3"
-            android:layout_marginTop="8dp"/>
+            app:layout_constraintStart_toStartOf="@id/bottle3"
+            app:layout_constraintTop_toBottomOf="@id/bottle3" />
 
         <CheckBox
             android:id="@+id/checkBox4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="4병"
-            app:layout_constraintTop_toBottomOf="@id/bottle4"
-            app:layout_constraintStart_toStartOf="@id/bottle4"
             app:layout_constraintEnd_toEndOf="@id/bottle4"
-            android:layout_marginTop="8dp"/>
+            app:layout_constraintStart_toStartOf="@id/bottle4"
+            app:layout_constraintTop_toBottomOf="@id/bottle4" />
 
         <CheckBox
             android:id="@+id/checkBox5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="5병"
-            app:layout_constraintTop_toBottomOf="@id/bottle5"
-            app:layout_constraintStart_toStartOf="@id/bottle5"
             app:layout_constraintEnd_toEndOf="@id/bottle5"
-            android:layout_marginTop="8dp"/>
+            app:layout_constraintStart_toStartOf="@id/bottle5"
+            app:layout_constraintTop_toBottomOf="@id/bottle5" />
 
         <CheckBox
             android:id="@+id/checkBox6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="6병"
-            app:layout_constraintTop_toBottomOf="@id/bottle6"
-            app:layout_constraintStart_toStartOf="@id/bottle6"
             app:layout_constraintEnd_toEndOf="@id/bottle6"
-            android:layout_marginTop="8dp"/>
+            app:layout_constraintStart_toStartOf="@id/bottle6"
+            app:layout_constraintTop_toBottomOf="@id/bottle6" />
 
         <CheckBox
             android:id="@+id/checkBox7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="7병"
-            app:layout_constraintTop_toBottomOf="@id/bottle7"
-            app:layout_constraintStart_toStartOf="@id/bottle7"
             app:layout_constraintEnd_toEndOf="@id/bottle7"
-            android:layout_marginTop="8dp"/>
+            app:layout_constraintStart_toStartOf="@id/bottle7"
+            app:layout_constraintTop_toBottomOf="@id/bottle7" />
 
         <CheckBox
             android:id="@+id/checkBox8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="8병"
-            app:layout_constraintTop_toBottomOf="@id/bottle8"
-            app:layout_constraintStart_toStartOf="@id/bottle8"
             app:layout_constraintEnd_toEndOf="@id/bottle8"
-            android:layout_marginTop="8dp"/>
+            app:layout_constraintStart_toStartOf="@id/bottle8"
+            app:layout_constraintTop_toBottomOf="@id/bottle8" />
 
         <EditText
             android:id="@+id/coment_water"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="284dp"
+            android:layout_marginBottom="30dp"
             android:hint="@string/water_hint"
             android:textAppearance="@style/TextAppearance.BodyM2"
             android:textSize="15sp"
-            android:layout_marginBottom="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

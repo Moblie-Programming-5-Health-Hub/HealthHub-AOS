@@ -36,4 +36,6 @@
 
     <!--water view-->
     <string name="water_hint">물병 하나 당 200mL로 계산</string>
+    <string name="watercheck_text">오늘은 얼마나 물을 마셨나요?</string>
+    <string name="watercheck_text_who">세계 보건기구(WHO)에 따르면 \n 하루 적정 물 섭취량은 2L(8잔)입니다!</string>
 </resources>
