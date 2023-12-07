@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import com.example.healthhub.R
 import com.example.healthhub.common.ViewModelFactory
 import com.example.healthhub.databinding.ActivityPersonalInfoBinding
+import com.example.healthhub.presentation.calorie.CalorieActivity
 import com.example.healthhub.presentation.workout.WorkoutDetailActivity
 import com.example.healthhub.util.binding.BindingActivity
 import com.example.healthhub.util.extension.hideKeyboard
@@ -44,7 +45,7 @@ class PersonalInfoActivity :
 
     private fun moveToHome() {
         Log.e("완료 버튼 클릭 후 페이지 이동", "${viewModel.nickname.value}")
-        val intent = Intent(this, WorkoutDetailActivity::class.java)
+        val intent = Intent(this, CalorieActivity::class.java)
         startActivity(intent)
         finish()
     }
