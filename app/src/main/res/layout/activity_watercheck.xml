@@ -229,14 +229,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="284dp"
-            android:hint="물병 하나 당 200mL로 계산"
+            android:hint="@string/water_hint"
             android:textAppearance="@style/TextAppearance.BodyM2"
             android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="50dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.506"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/check_water" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
