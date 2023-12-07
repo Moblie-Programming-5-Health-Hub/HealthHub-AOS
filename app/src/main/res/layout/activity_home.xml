@@ -149,7 +149,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:backgroundTint="@color/main_2"
-                android:text="식단 관리하기" />
+                android:text="수분섭취 기록하기" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
