@@ -30,7 +30,7 @@ class PersonalInfoActivity :
         }
         binding.btnAllReady.setOnClickListener {
             Log.e("완료 버튼 클릭", "${viewModel.nickname.value}")
-            Log.e("완료 버튼 클릭","${viewModel.gender.value}")
+            Log.e("완료 버튼 클릭", "${viewModel.gender.value}")
             if (viewModel.readyToStart()) {
                 viewModel.savePersonalInfo()
                 moveToHome()
