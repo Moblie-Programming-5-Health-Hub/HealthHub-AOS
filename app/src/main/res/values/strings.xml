@@ -20,4 +20,7 @@
     <string name="home_exercise">운동 시작하기</string>
     <string name="home_food">식단 관리하기</string>
     <string name="home_water">수분섭취 체크하기</string>
+
+    <!--water view-->
+    <string name="water_hint">물병 하나 당 200mL로 계산</string>
 </resources>
