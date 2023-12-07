@@ -51,7 +51,7 @@
             android:shadowDx="4"
             android:shadowDy="4"
             android:shadowRadius="10"
-            android:text="님의 식단"
+            android:text="@string/calorie_text_meal"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintBottom_toBottomOf="@id/tv_user"
             app:layout_constraintStart_toEndOf="@+id/tv_user"
@@ -68,7 +68,7 @@
             android:shadowDx="4"
             android:shadowDy="4"
             android:shadowRadius="5"
-            android:text="오늘은 어떤 음식을 드셨나요?"
+            android:text="@string/calorie_food_kind"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@+id/tv_user" />
@@ -81,16 +81,16 @@
             android:layout_marginBottom="20dp"
             android:src="@drawable/day1"
             app:layout_constraintDimensionRatio="1"
-            app:layout_constraintStart_toStartOf="@id/btn_morning"
+            app:layout_constraintStart_toStartOf="@id/btn_breakfast"
             app:layout_constraintTop_toBottomOf="@id/textView1" />
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_morning"
+            android:id="@+id/btn_breakfast"
             style="@style/Widget.FullButton.Basic.Vertical"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/main_4"
-            android:text="아침"
+            android:text="@string/calorie_breakfast"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@id/iv_day1" />
@@ -111,10 +111,10 @@
             style="@style/Widget.FullButton.Basic.Vertical"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/main_4"
-            android:text="점심"
+            android:text="@string/calorie_lunch"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintEnd_toStartOf="@+id/btn_dinner"
-            app:layout_constraintStart_toEndOf="@id/btn_morning"
+            app:layout_constraintStart_toEndOf="@id/btn_breakfast"
             app:layout_constraintTop_toBottomOf="@id/iv_day2" />
 
         <ImageView
@@ -134,7 +134,7 @@
             style="@style/Widget.FullButton.Basic.Vertical"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/main_4"
-            android:text="저녁"
+            android:text="@string/calorie_dinner"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintEnd_toEndOf="@id/gl_end"
             app:layout_constraintTop_toBottomOf="@+id/iv_day3" />
@@ -146,7 +146,7 @@
             android:hint="700kcal"
             android:textAppearance="@style/TextAppearance.Title2"
             app:layout_constraintStart_toStartOf="@id/gl_start"
-            app:layout_constraintTop_toBottomOf="@id/btn_morning" />
+            app:layout_constraintTop_toBottomOf="@id/btn_breakfast" />
 
         <EditText
             android:id="@+id/et_lunch"
@@ -173,7 +173,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/main_1"
-            android:text="칼로리 계산하기"
+            android:text="@string/calorie_calculate"
             android:textAppearance="@style/TextAppearance.Title2"
             app:layout_constraintEnd_toEndOf="@id/gl_end"
             app:layout_constraintStart_toStartOf="@id/gl_start"
@@ -190,7 +190,7 @@
             android:shadowDx="4"
             android:shadowDy="4"
             android:shadowRadius="5"
-            android:text="오늘 섭취한 총 칼로리는?"
+            android:text="@string/calorie_text_total_calorie"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@+id/btn_calc" />
@@ -212,7 +212,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
-            android:text="kcal"
+            android:text="@string/calorie_kcal"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toEndOf="@id/tv_calorie"
             app:layout_constraintTop_toBottomOf="@id/tv_total_calorie" />
@@ -231,7 +231,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:text="님은 오늘 권장 kcal의"
+            android:text="@string/calorie_text_recommend"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintBottom_toBottomOf="@id/tv_user_tmp"
             app:layout_constraintStart_toEndOf="@id/tv_user_tmp"
@@ -252,7 +252,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:text="% 만큼 섭취하셨습니다!"
+            android:text="@string/calorie_text_eat"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintBottom_toBottomOf="@id/calorie_percent"
             app:layout_constraintStart_toEndOf="@id/calorie_percent"

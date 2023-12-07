@@ -21,6 +21,19 @@
     <string name="home_food">식단 관리하기</string>
     <string name="home_water">수분섭취 체크하기</string>
 
+    <!--calorie view-->
+    <string name="calorie_text_meal">님의 식단</string>
+    <string name="calorie_food_kind">오늘은 어떤 음식을 드셨나요?</string>
+    <string name="calorie_breakfast">아침</string>
+    <string name="calorie_lunch">점심</string>
+    <string name="calorie_dinner">저녁</string>
+    <string name="calorie_calculate">칼로리 계산하기</string>
+    <string name="calorie_text_total_calorie">오늘 섭취한 총 칼로리는?</string>
+    <string name="calorie_kcal">kcal</string>
+    <string name="calorie_text_recommend">님은 오늘 권장 kcal의</string>
+    <string name="calorie_text_eat">% 만큼 섭취하셨습니다!</string>
+
+
     <!--water view-->
     <string name="water_hint">물병 하나 당 200mL로 계산</string>
 </resources>
