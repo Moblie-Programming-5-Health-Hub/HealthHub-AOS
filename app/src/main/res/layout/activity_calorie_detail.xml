@@ -51,7 +51,7 @@
             android:shadowDx="4"
             android:shadowDy="4"
             android:shadowRadius="10"
-            android:text="님의 식단"
+            android:text="@string/calorie_text_meal"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintBottom_toBottomOf="@id/tv_user"
             app:layout_constraintStart_toEndOf="@+id/tv_user"
