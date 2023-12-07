@@ -32,6 +32,9 @@
         <activity
             android:name=".presentation.workout.WorkoutDetailActivity"
             android:exported="true" />
+        <activity
+            android:name=".presentation.calorie.CalorieActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
