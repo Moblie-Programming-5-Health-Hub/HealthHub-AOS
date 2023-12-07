@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.example.healthhub.presentation.info.PersonalInfoViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,35 +28,50 @@
             android:orientation="vertical"
             app:layout_constraintGuide_end="@dimen/spacing24" />
 
-        <EditText
-            android:id="@+id/user"
+        <TextView
+            android:id="@+id/tv_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:hint="고경아"
+            android:padding="3dp"
+            android:shadowColor="#ffffff"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="10"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="nickname" />
 
         <TextView
             android:id="@+id/tv_meal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="10"
             android:text="님의 식단"
             android:textAppearance="@style/TextAppearance.Title1"
-            app:layout_constraintBottom_toBottomOf="@id/user"
-            app:layout_constraintStart_toEndOf="@+id/user"
-            app:layout_constraintTop_toTopOf="@+id/user" />
+            app:layout_constraintBottom_toBottomOf="@id/tv_user"
+            app:layout_constraintStart_toEndOf="@+id/tv_user"
+            app:layout_constraintTop_toTopOf="@+id/tv_user" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:background="@color/yellow"
+            android:padding="4dp"
+            android:shadowColor="@color/white"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="5"
             android:text="오늘은 어떤 음식을 드셨나요?"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
-            app:layout_constraintTop_toBottomOf="@+id/user" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_user" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_morning"
@@ -90,7 +108,7 @@
             android:id="@+id/et_morning"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="200kcal"
+            android:hint="700kcal"
             android:textAppearance="@style/TextAppearance.Title2"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@id/btn_morning" />
@@ -99,7 +117,7 @@
             android:id="@+id/et_lunch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="200kcal"
+            android:hint="900kcal"
             android:textAppearance="@style/TextAppearance.Title2"
             app:layout_constraintEnd_toStartOf="@id/et_dinner"
             app:layout_constraintStart_toEndOf="@id/et_morning"
@@ -109,18 +127,19 @@
             android:id="@+id/et_dinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="200kcal"
+            android:hint="600kcal"
             android:textAppearance="@style/TextAppearance.Title2"
             app:layout_constraintEnd_toEndOf="@id/gl_end"
             app:layout_constraintTop_toBottomOf="@id/btn_dinner" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_calc"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@color/main_4"
+            android:backgroundTint="@color/main_1"
             android:text="칼로리 계산하기"
+            app:layout_constraintStart_toStartOf="@id/gl_start"
             android:textAppearance="@style/TextAppearance.Title2"
             app:layout_constraintEnd_toEndOf="@id/gl_end"
             app:layout_constraintTop_toBottomOf="@id/et_morning" />
@@ -130,52 +149,75 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:background="@color/yellow"
+            android:padding="4dp"
+            android:shadowColor="@color/white"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="5"
             android:text="오늘 섭취한 총 칼로리는?"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@+id/btn_calc" />
 
-        <EditText
-            android:id="@+id/et_calorie"
+        <TextView
+            android:id="@+id/tv_calorie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="600kcal"
+            android:text="600"
             android:textAppearance="@style/TextAppearance.Title1"
+            android:textColor="@color/main_3"
             app:layout_constraintStart_toStartOf="@id/gl_start"
             app:layout_constraintTop_toBottomOf="@id/tv_total_calorie" />
 
-        <EditText
-            android:id="@+id/user_tmp"
+        <TextView
+            android:id="@+id/tv_kcal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="고경아"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="kcal"
+            android:textAppearance="@style/TextAppearance.Title1"
+            app:layout_constraintStart_toEndOf="@id/tv_calorie"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_calorie" />
+
+        <TextView
+            android:id="@+id/tv_user_tmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintStart_toStartOf="@id/gl_start"
-            app:layout_constraintTop_toBottomOf="@id/et_calorie" />
+            app:layout_constraintTop_toBottomOf="@id/tv_calorie"
+            tools:text="nickname" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:text="님은 오늘 권장 kcal의"
             android:textAppearance="@style/TextAppearance.Title1"
-            app:layout_constraintBottom_toBottomOf="@id/user_tmp"
-            app:layout_constraintStart_toEndOf="@id/user_tmp"
-            app:layout_constraintTop_toTopOf="@id/user_tmp" />
+            app:layout_constraintBottom_toBottomOf="@id/tv_user_tmp"
+            app:layout_constraintStart_toEndOf="@id/tv_user_tmp"
+            app:layout_constraintTop_toTopOf="@id/tv_user_tmp" />
 
-        <EditText
+        <TextView
             android:id="@+id/calorie_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="85"
+            android:layout_marginTop="10dp"
+            android:text="85"
+
             android:textAppearance="@style/TextAppearance.Title1"
+            android:textColor="@color/main_4"
             app:layout_constraintStart_toStartOf="@id/gl_start"
-            app:layout_constraintTop_toBottomOf="@id/user_tmp" />
+            app:layout_constraintTop_toBottomOf="@id/tv_user_tmp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:text="% 만큼 섭취하셨습니다!"
             android:textAppearance="@style/TextAppearance.Title1"
             app:layout_constraintBottom_toBottomOf="@id/calorie_percent"
