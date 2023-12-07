@@ -36,7 +36,7 @@
             android:textAppearance="@style/TextAppearance.Title1"
             android:textColor="@android:color/black"
             android:textSize="20sp"
-            android:text="세계 보건기구(WHO)에 따르면 \n 하루 적정 물 섭취량은 2L(8잔)입니다!"
+            android:text="@string/watercheck_text_who"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_center_icon_2" />
@@ -52,7 +52,7 @@
             android:lineSpacingExtra="7dp"
             android:textAppearance="@style/TextAppearance.Title1"
             android:textSize="25sp"
-            android:text="오늘은 얼마나 물을 마셨나요?"
+            android:text="@string/watercheck_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:textColor="#147814"
