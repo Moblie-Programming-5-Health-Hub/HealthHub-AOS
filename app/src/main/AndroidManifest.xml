@@ -33,6 +33,12 @@
             android:name=".presentation.workout.WorkoutDetailActivity"
             android:exported="true" />
         <activity
+            android:name=".presentation.home.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.water.HydrationActivity"
+            android:exported="true" />
+        <activity
             android:name=".presentation.calorie.CalorieActivity"
             android:exported="true" />
     </application>
